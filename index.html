@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foundation for Sites</title>
   <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 </head>
 <body>
 
-  <div class="top-bar">
+  <div id="top-bar" class="top-bar">
     <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text"><img src="img/logo.png" height=70 width=70></li>
+      <ul id="bottom" class="dropdown menu" data-dropdown-menu>
+        <li id="bottom2" class="menu-text"><img src="img/logo.png" height=100 width=100></li>
         <li>
           <a href="#">Facts</a>
           <ul class="menu vertical">
@@ -23,42 +24,75 @@
         </li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a data-toggle="animatedModal10">Sign Up</a><li>
+          <!-- <div class="switch">
+            <input onclick="background()" class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="exampleSwitch">
+              <span class="show-for-sr">Background Color</span>
+            </label>
+          </div> --><button onclick="backgroundB()" type="button" class="button night">Night Mode</button>
+                    <button  onclick="backgroundW()"type="button" class="button day">Day Mode</button>
+          <div class="reveal" id="animatedModal10" data-reveal data-animation-in="someAnimationIn">
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <form>
+              First name:<br>
+              <input type="text" name="firstname"><br>
+              Email:<br>
+              <input type="text" name="lastname">
+              <a class="button" data-open="submit">Submit</a>
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </form>
+            <div class="reveal" id="submit" data-reveal>
+              <h2>Thank You! An Email will be sent to you!</h2>
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul id="search" class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="alert button search">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+
+      <ul class="orbit-container">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button><button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+        <li class="orbit-slide is-active">
+          <img class="orbit-image" src="img/image1.jpeg" alt="space">
+          <figcaption class="orbit-caption">Space!!!</figcaption>
+        </li>
+        <li class="orbit-slide is-active">
+          <img class="orbit-image" src="img/image2.png" alt="space">
+          <figcaption class="orbit-caption">Space!!!</figcaption>
+        </li>
+        <li class="orbit-slide is-active">
+          <img class="orbit-image" src="https://d13yacurqjgara.cloudfront.net/users/207059/screenshots/2354622/androidtipsspacepanoramadribbble.gif" alt="space">
+          <figcaption class="orbit-caption">Space!!!</figcaption>
+        </li>
+        <li class="orbit-slide is-active">
+          <img class="orbit-image" src="http://i.imgur.com/pqdICWJ.gif" alt="space">
+          <figcaption class="orbit-caption">Space!!!</figcaption>
+        </li>
       </ul>
     </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="alert button">Search</button></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-
-    <ul class="orbit-container">
-      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button><button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-
-    <li class="orbit-slide is-active">
-      <img class="orbit-image" src="img/image1.jpeg" alt="space">
-      <figcaption class="orbit-caption">Space!!!</figcaption>
-    </li>
-      <li class="orbit-slide is-active">
-        <img class="orbit-image" src="img/image2.png" alt="space">
-        <figcaption class="orbit-caption">Space!!!</figcaption>
-      </li>
-      <li class="orbit-slide is-active">
-        <img class="orbit-image" src="img/image3.jpg" alt="space">
-        <figcaption class="orbit-caption">Space!!!</figcaption>
-      </li>
-    </ul>
-  </div>
 
     <div class="expanded row">
       <div class="large-3 columns">
-      <div class="item mercury">
-        <h1>Mercury</h1>
-        <p>Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis and up until 1965 it was thought that the same side of Mercury constantly faced the Sun.</p>
-          </div>
+        <div class="item mercury">
+          <h1>Mercury</h1>
+          <p>Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis and up until 1965 it was thought that the same side of Mercury constantly faced the Sun.</p>
+        </div>
       </div>
       <div class="large-6 columns">
         <div class="item sun">
@@ -75,9 +109,9 @@
     </div>
     <div class="expanded row">
       <div class="small-6 large-3 columns">
-      <div class="item2 earth">
-        <h1>Earth</h1>
-        <p>Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity.</p>
+        <div class="item2 earth">
+          <h1>Earth</h1>
+          <p>Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity.</p>
         </div>
       </div>
       <div class="small-6 large-3 columns">
@@ -92,26 +126,39 @@
           <p>aturn is the sixth planet from the Sun and the most distant that can be seen with the naked eye. Saturn is the second largest planet and is best known for its fabulous ring system that was first observed in 1610 by the astronomer Galileo Galilei.</p>
         </div>
       </div>
-        <div class="small-6 large-3 columns">
-          <div class="item2 neptune">
-            <h1>Neptune</h1>
-            <p>Neptune is the eighth planet from the Sun making it the most distant in the solar system. This gas giant planet may have formed much closer to the Sun in early solar system history before migrating to its present position.</p>
-          </div>
+      <div class="small-6 large-3 columns">
+        <div class="item2 neptune">
+          <h1>Neptune</h1>
+          <p>Neptune is the eighth planet from the Sun making it the most distant in the solar system. This gas giant planet may have formed much closer to the Sun in early solar system history before migrating to its present position.</p>
+        </div>
       </div>
     </div>
     <div class="expanded row">
       <div class="small-12 colums">
-      <div class="item3">
-        <h1>Milky Way</h1>
-        <p class="font">
-          The Milky Way Galaxy is our home galaxy in the universe. It is a fairly typical barred spiral with four major arms in its disk, at least one spur, and a newly discovered outer arm. The galactic centre, which is located about 26,000 light-years from Earth, contains at least one supermassive black hole (called Sagittarius A*), and is crossed by a bar. The Milky Way began forming around 12 billion years ago and is part of a group of about 50 galaxies called the Local Group. The Andromeda Galaxy is part of this group as are numerous smaller galaxies, including the Magellanic Clouds. The Local Group itself is part of a larger gathering of galaxies called the Virgo Supercluster of galaxies.
-        </p>
+        <div class="item3">
+          <h1>Milky Way</h1>
+          <p class="font">
+            The Milky Way Galaxy is our home galaxy in the universe. It is a fairly typical barred spiral with four major arms in its disk, at least one spur, and a newly discovered outer arm. The galactic centre, which is located about 26,000 light-years from Earth, contains at least one supermassive black hole (called Sagittarius A*), and is crossed by a bar. The Milky Way began forming around 12 billion years ago and is part of a group of about 50 galaxies called the Local Group. The Andromeda Galaxy is part of this group as are numerous smaller galaxies, including the Magellanic Clouds. The Local Group itself is part of a larger gathering of galaxies called the Virgo Supercluster of galaxies.
+          </p>
+        </div>
       </div>
     </div>
-    </div>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/what-input/what-input.js"></script>
-  <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+    <footer>
+      <div class="row">
+        <div class="small-4 columns">
+          <span>Contact</span>
+        </div>
+        <div class="small-4 columns">
+          <span>About</spna>
+        </div>
+        <div class="small-4 columns">
+          <span class="git"><a href="https://github.com/Flores120">Github</a></span>
+        </div>
+      </div>
+    </footer>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  </html>
